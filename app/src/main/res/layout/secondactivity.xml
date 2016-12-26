@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/title_bar"
+        android:id="@+id/title_bar"/>
+
+    <TextView
+        android:id="@+id/secondTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/title_bar"
+        android:text="第二个activity" />
+    <TextView
+        android:id="@+id/tvThread"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@id/secondTextView"
+        android:hint="点击提交后连接服务器"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        />
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="300dp"
+        android:fontFamily="30sp"
+        android:layout_centerHorizontal="true"
+        android:text="提交"
+        />
+
+</RelativeLayout>

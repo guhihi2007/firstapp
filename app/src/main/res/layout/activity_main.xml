@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.gpp.firstapp.MainActivity">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:text="欢迎使用个推4.0开发者平台"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView1"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="40dp"
+        android:text="登录您的个推账号"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/usernameEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/textView2"
+        android:layout_alignRight="@id/textView2"
+        android:layout_below="@id/textView2"
+        android:layout_marginTop="20dp"
+        android:hint="账号"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/usernameEditText"
+        android:layout_alignRight="@id/usernameEditText"
+        android:layout_below="@id/usernameEditText"
+        android:layout_marginTop="20dp"
+        android:hint="密码"
+        android:textSize="15sp" />
+    <Button
+        android:id="@+id/logButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/passwordEditText"
+        android:layout_alignRight="@id/passwordEditText"
+        android:layout_below="@id/passwordEditText"
+        android:layout_marginTop="10dp"
+        android:text="登录"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/registerTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logButton"
+        android:layout_marginTop="10dp"
+        android:layout_alignLeft="@id/logButton"
+        android:text="快速注册"
+        />
+
+    <TextView
+        android:id="@+id/forgetText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/registerTV"
+        android:layout_alignRight="@id/logButton"
+        android:text="忘记密码?" />
+
+
+</RelativeLayout>
