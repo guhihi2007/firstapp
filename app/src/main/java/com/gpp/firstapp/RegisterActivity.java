@@ -45,8 +45,8 @@ public class RegisterActivity extends Activity implements View.OnClickListener, 
     @Override
     public void initView() {
 
-        new_username_ET = (EditText) findViewById(R.id.new_username_btn);
-        new_password_ET = (EditText) findViewById(R.id.new_password_btn);
+        new_username_ET = (EditText) findViewById(R.id.new_username_ET);
+        new_password_ET = (EditText) findViewById(R.id.new_password_ET);
         user_sub_btn = (Button) findViewById(R.id.user_sub_btn);
 
     }
