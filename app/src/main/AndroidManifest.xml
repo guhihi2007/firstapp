@@ -21,5 +21,6 @@
             android:label="SecondActivity"></activity>
         <activity android:name="com.gpp.firstapp.RegisterActivity"
             android:label="RegisterActivity"/>
+        <activity android:name=".Set_Activity" />
     </application>
 </manifest>
