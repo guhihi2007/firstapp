@@ -32,10 +32,10 @@ public class SecondActivity extends Activity implements Initialization, View.OnC
         super.onCreate(savedInstanceState);
         setContentView(R.layout.secondactivity);
 
-        handler = new FirstHandler();//创建Handler对象
-        Intent intent = getIntent();//拿到intent对象
-        String s = intent.getStringExtra("com.example.administrator.myapplication.MainActivity.String");//得到传入的数据
-        textView.setText(s);//把数据设置到TexView
+//        handler = new FirstHandler();//创建Handler对象
+//        Intent intent = getIntent();//拿到intent对象
+//        String s = intent.getStringExtra("com.gpp.firstapp.MainActivity.String");//得到传入的数据
+//        textView.setText(s);//把数据设置到TexView
 
     }
 

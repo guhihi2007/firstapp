@@ -31,7 +31,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String sql = "CREATE TABLE IF NOT EXISTS "+TABLE_NAME + " ( name TEXT,password TEXT)";
+        String sql = "CREATE TABLE IF NOT EXISTS "+TABLE_NAME + " ( name PRIMARY KEY NOT NULL,password TEXT NOT NULL)";
         //_id integer primary key autoincrement," + "
         db.execSQL(sql);
         Log.d("gpp", "创建完成");

@@ -28,10 +28,8 @@ public class RegisterActivity extends Activity implements View.OnClickListener, 
     private EditText new_username_ET;
     private EditText new_password_ET;
     private Button user_sub_btn;
-    private String s1;
-    private String s2;
-    DatabaseHelper databaseHelper;
-    SQLiteDatabase db;
+    DBUtil dbUtil= new DBUtil();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,9 +38,6 @@ public class RegisterActivity extends Activity implements View.OnClickListener, 
 
         initView();
         initListener();
-
-        databaseHelper = new DatabaseHelper(RegisterActivity.this, DB_NAME);
-        databaseHelper.getWritableDatabase();
     }
 
     @Override
@@ -51,7 +46,6 @@ public class RegisterActivity extends Activity implements View.OnClickListener, 
         new_username_ET = (EditText) findViewById(R.id.new_username_ET);
         new_password_ET = (EditText) findViewById(R.id.new_password_ET);
         user_sub_btn = (Button) findViewById(R.id.user_sub_btn);
-
     }
 
     @Override
@@ -61,46 +55,15 @@ public class RegisterActivity extends Activity implements View.OnClickListener, 
 
     @Override
     public void onClick(View v) {
-        insertDB();
+
+        String name =new_username_ET.getText().toString().trim();
+        String password = new_password_ET.getText().toString().trim();
+
+        dbUtil.insertDB(RegisterActivity.this,name,password);
     }
 
-    public void insertDB() {
-        s1 = new_username_ET.getText().toString();
-        s2 = new_password_ET.getText().toString();
-        if (selectDB()) {
-            return;
-        } else {
-            ContentValues cv = new ContentValues();
-            cv.put(TABLE_KEY, s1);
-            cv.put(TABLE_VALUES, s2);
-            db.insert(TABLE_NAME, null, cv);
-            db.close();
-            Toast.makeText(RegisterActivity.this, "注册成功", Toast.LENGTH_SHORT).show();
-        }
-//        db = databaseHelper.getWritableDatabase();
-//   方法一：
-//        String sql = " INSERT INTO "+TABLE_NAME+" (NAME,PASSWORD) VALUES ( '"+s1+"', '"+s2+"')";
-//        db.execSQL(sql);
-//   方法二：
-//        String sql = " INSERT INTO "+TABLE_NAME+" (NAME,PASSWORD) VALUES (?,?)";
-//        Object args [] = new Object[]{s1,s2};
-//        Log.e("honaf",sql);
-//        db.execSQL(sql,args);
-//   方法三:
 
-    }
 
-    public boolean selectDB() {
-        String sql = "SELECT " + TABLE_KEY + " FROM " + TABLE_NAME + "";
-        String args [] = new String[]{"name","password"};
-        Cursor cursor = db.rawQuery(sql, args);
-        while (cursor.moveToNext()) {
-            String s3 = cursor.getString(0);
-            if (s3.equals(new_username_ET.getText().toString())) {
-                Toast.makeText(this, "用户名已注册", Toast.LENGTH_SHORT).show();
-                return true;
-            }
-        }
-        return false;
-    }
+
+
 }
