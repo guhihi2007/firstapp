@@ -17,7 +17,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private Button logButton;
     private TextView registerTV;
     private TextView forgetText;
-    DBUtil dbUtil = new DBUtil();
+    DBUtil dbUtil = new DBUtil() ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +25,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
         setContentView(R.layout.activity_main);
         initView();
         initListener();
-
     }
 
     public void initView() {
@@ -54,14 +53,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 String name = usernameEditText.getText().toString().trim();
                 String password = passwordEditText.getText().toString().trim();
                     if (dbUtil.selectDB(MainActivity.this, name, password)) {
-
                         Intent intent = new Intent();//创建intent对象
                         intent.setClass(MainActivity.this, SecondActivity.class);//设置intent传入的activity类
+                        intent.putExtra("user_name",name);
                         startActivity(intent);//启动intent
                         Toast.makeText(MainActivity.this, "登录成功", Toast.LENGTH_SHORT).show();
 
-                    } else {
-                        Toast.makeText(MainActivity.this, "账号未注册", Toast.LENGTH_SHORT).show();
                     }
                 break;
         }

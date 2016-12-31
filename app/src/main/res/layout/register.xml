@@ -17,6 +17,8 @@
             android:layout_height="44dp"
             android:layout_marginTop="20dp"
             android:hint="请输入邮箱/手机号码"
+            android:inputType="text"
+            android:imeOptions="actionNext"
             />
 
         <EditText
@@ -25,6 +27,8 @@
             android:layout_height="44dp"
             android:layout_below="@id/new_username_ET"
             android:hint="请输入密码"
+            android:inputType="textPassword"
+            android:imeOptions="actionGo"
             />
 
         <Button

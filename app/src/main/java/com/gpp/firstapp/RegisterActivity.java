@@ -20,10 +20,6 @@ import java.util.HashMap;
 
 public class RegisterActivity extends Activity implements View.OnClickListener, Initialization {
 
-    public static final String DB_NAME = "my_data.db";
-    public static final String TABLE_NAME = "userinfo";
-    public static final String TABLE_KEY = "name";
-    public static final String TABLE_VALUES = "password";
 
     private EditText new_username_ET;
     private EditText new_password_ET;
@@ -56,8 +52,8 @@ public class RegisterActivity extends Activity implements View.OnClickListener, 
     @Override
     public void onClick(View v) {
 
-        String name =new_username_ET.getText().toString().trim();
-        String password = new_password_ET.getText().toString().trim();
+        String name =new_username_ET.getText().toString();
+        String password = new_password_ET.getText().toString();
 
         dbUtil.insertDB(RegisterActivity.this,name,password);
     }
