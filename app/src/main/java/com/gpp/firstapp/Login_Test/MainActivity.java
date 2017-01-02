@@ -1,14 +1,17 @@
-package com.gpp.firstapp;
+package com.gpp.firstapp.Login_Test;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.gpp.firstapp.DataBase_Test.DBUtil;
+import com.gpp.firstapp.ProgressBar_Test.ProgressDialog_test;
+import com.gpp.firstapp.R;
 
 public class MainActivity extends Activity implements View.OnClickListener {
 
@@ -17,7 +20,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private Button logButton;
     private TextView registerTV;
     private TextView forgetText;
-    DBUtil dbUtil = new DBUtil() ;
+    DBUtil dbUtil = new DBUtil();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,16 +55,18 @@ public class MainActivity extends Activity implements View.OnClickListener {
             case R.id.logButton:
                 String name = usernameEditText.getText().toString().trim();
                 String password = passwordEditText.getText().toString().trim();
-                    if (dbUtil.selectDB(MainActivity.this, name, password)) {
-                        Intent intent = new Intent();//创建intent对象
-                        intent.setClass(MainActivity.this, SecondActivity.class);//设置intent传入的activity类
-                        intent.putExtra("user_name",name);
-                        startActivity(intent);//启动intent
-                        Toast.makeText(MainActivity.this, "登录成功", Toast.LENGTH_SHORT).show();
+                ProgressDialog_test.getInstance2(this);
+                if (dbUtil.selectDB(MainActivity.this, name, password)) {
+                    Intent intent = new Intent();//创建intent对象
+                    intent.setClass(MainActivity.this, SecondActivity.class);//设置intent传入的activity类
+                    intent.putExtra("user_name", name);
+                    startActivity(intent);//启动intent
+                    Toast.makeText(MainActivity.this, "登录成功", Toast.LENGTH_SHORT).show();
 
-                    }
+                }
                 break;
         }
     }
+
 
 }

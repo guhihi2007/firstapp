@@ -1,4 +1,4 @@
-package com.gpp.firstapp;
+package com.gpp.firstapp.ListView_Test;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -9,6 +9,9 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.gpp.firstapp.Login_Test.Initialization;
+import com.gpp.firstapp.R;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -26,7 +29,7 @@ import java.util.HashMap;
  *
  */
 
-public class SimpleAdapter_ListView_test extends Activity implements Initialization{
+public class SimpleAdapter_ListView_test extends Activity implements Initialization {
 
     private ListView LV_simple;
     private ImageView LV_image;

@@ -1,8 +1,11 @@
-package com.gpp.firstapp;
+package com.gpp.firstapp.Login_Test;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
+
+import com.gpp.firstapp.Login_Test.Initialization;
+import com.gpp.firstapp.R;
 
 /**
  * Created by Administrator on 2016/12/27.

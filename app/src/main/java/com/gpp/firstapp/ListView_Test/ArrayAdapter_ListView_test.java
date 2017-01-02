@@ -1,4 +1,4 @@
-package com.gpp.firstapp;
+package com.gpp.firstapp.ListView_Test;
 
 import android.app.Activity;
 import android.content.Context;
@@ -9,7 +9,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
+import com.gpp.firstapp.Login_Test.Initialization;
+import com.gpp.firstapp.R;
 
 /**
  * Created by Administrator on 2016/12/30.

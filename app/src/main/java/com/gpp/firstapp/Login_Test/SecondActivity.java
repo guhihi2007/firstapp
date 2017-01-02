@@ -1,4 +1,4 @@
-package com.gpp.firstapp;
+package com.gpp.firstapp.Login_Test;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -10,7 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import static com.gpp.firstapp.R.layout.set_activity;
+import com.gpp.firstapp.Login_Test.Initialization;
+import com.gpp.firstapp.R;
 
 /**
  * Created by Administrator on 2016/12/21.
@@ -36,7 +37,7 @@ public class SecondActivity extends Activity implements Initialization, View.OnC
         handler = new FirstHandler();//创建Handler对象
         Intent intent = getIntent();//拿到intent对象
         String name =intent.getStringExtra("user_name");
-//        String s = intent.getStringExtra("com.gpp.firstapp.MainActivity.String");//得到传入的数据
+//        String s = intent.getStringExtra("com.gpp.firstapp.Login_Test.MainActivity.String");//得到传入的数据
 //        textView.setText(s);//把数据设置到TexView
         textView.setText(name);
 

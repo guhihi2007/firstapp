@@ -1,18 +1,13 @@
-package com.gpp.firstapp;
+package com.gpp.firstapp.Login_Test;
 
 import android.app.Activity;
-import android.content.ContentValues;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
-import java.sql.ResultSet;
-import java.util.HashMap;
+import com.gpp.firstapp.DataBase_Test.DBUtil;
+import com.gpp.firstapp.R;
 
 /**
  * Created by Administrator on 2016/12/26.

@@ -1,4 +1,4 @@
-package com.gpp.firstapp;
+package com.gpp.firstapp.Login_Test;
 
 /**
  * Created by Administrator on 2016/12/27.
@@ -8,7 +8,7 @@ package com.gpp.firstapp;
  * 初始化View
  * 初始化监听器
  */
-interface Initialization {
+public interface Initialization {
 
      void initView();
 
