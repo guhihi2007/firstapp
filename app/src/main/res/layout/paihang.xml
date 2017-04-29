@@ -7,9 +7,16 @@
     <TextView
         android:id="@+id/Fragment_paihang"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center_vertical"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
         android:text="排行"
         android:textAlignment="center"
         android:textSize="40sp" />
+    <ImageView
+        android:id="@+id/image_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:src="@mipmap/img1"
+        />
 </LinearLayout>

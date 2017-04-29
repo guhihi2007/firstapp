@@ -21,7 +21,7 @@ public class JX extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.jingxuan,null);
-        ListView listView = (ListView)view.findViewById(R.id.jingx_ListV);
+        ListView listView = (ListView)view.findViewById(R.id.LV_listview);
         MyBaseAdapter myBaseAdapter = new MyBaseAdapter(getActivity());
         listView.setAdapter(myBaseAdapter);
         return view;

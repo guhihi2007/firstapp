@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_1"
+        android:text="对话框进度条"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+
+    <Button
+        android:id="@+id/btn_2"
+        android:text="进度条"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+
+    <Button
+        android:id="@+id/btn_3"
+        android:text="登录"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+
+    <Button
+        android:id="@+id/btn_4"
+        android:text="simple_List_view"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+
+    <Button
+        android:id="@+id/btn_5"
+        android:text="BASe_List_view"
+
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+
+    <Button
+        android:id="@+id/btn_6"
+        android:text="ARRAY_List_view"
+
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+    <!--<Button-->
+        <!--android:id="@+id/btn_7"-->
+        <!--android:text="fragment"-->
+
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="40dp" />-->
+</LinearLayout>

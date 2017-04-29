@@ -17,6 +17,7 @@ public class ArrayList {
             str.add(map);
         }
         str.get(1).toString();
+
         return str;
     }
 }
